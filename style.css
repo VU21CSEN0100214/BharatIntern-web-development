@@ -1,0 +1,222 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),
+                url('/images/background.jpg');
+            background-size: cover;
+            color: white;
+}
+nav{
+    width:100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 70px;
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.logo span{
+    color: rgb(69, 142, 72);
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 70px;
+}
+.container .left{
+    flex-basis: 60%;
+}
+.container .right{
+    flex-basis: 30%;
+}
+.left h2{
+    font-family: 'Poppins', sans-serif;
+    color: #6ab04c;
+}
+.left h1{
+    font-family: 'Kalam', cursive;
+    font-size: 5em;
+}
+.left p{
+    font-family: 'Poppins', sans-serif;
+    line-height: 2.5rem;
+}
+#myp{
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    border: 1px dashed white;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+}
+#about{
+    cursor: pointer;
+    padding: 150px 70px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+}
+.leftbio{
+    flex-basis: 40%;
+}
+.rightbio{
+    flex-basis: 60%;
+}
+.leftbio img{
+    width: 100%;
+    height: 700px;
+    border-radius: 8px;
+}
+.rightbio{
+    text-align: right;
+    padding: 0 40px;
+}
+.rightbio p{
+    margin: 15px 0;
+    line-height: 2.5rem;
+}
+.rightbio h1{
+    font-size: 3rem;
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
+}
+#follow{
+    text-align: center;
+}
+#follow i{
+    color: #6ab04c;
+    font-size: 1.5rem;
+    margin:0 0.5rem;
+}
+.skills{
+    background: #2e2d2d;
+}
+.inner{
+    padding-top:20px ;
+}
+.skill_info{
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    padding: 1rem 2rem;
+    right: 45%;
+}
+.skill_info:after{
+    position: absolute;
+    content:"";
+    left: 22%;
+    height: 4px;
+    width: 90px;
+    background-color:#6ab04c ;
+    border-radius: 2px;
+}
+.box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 5rem 80px;
+    font-size: 1.2rem;
+}
+.skill-box{
+    padding: 1rem;
+    color: #ddd;
+    cursor: pointer;
+}
+.skill-box:hover .img{
+    transform: translateY(-10px);
+}
+.skill-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+.skill-title::after{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 35px;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+}
+.skill-title::before{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 35px;
+    height: 4px;
+    border-radius:  0 2px 2px 0;
+}
+.img{
+    width:90px;
+    height: 90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.img:after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:50%;
+    height: 90px;
+    background: rgba(100, 100, 100, 0.5);
+    border-radius: 45px 0 0 45px;
+}
+.skill-title h3{
+    color: #fff;
+    margin-top: 0.5rem;
+}
+.skill-icon{
+    width:50px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 990px){
+    .box{
+        grid-template-columns: repeat(2, 1fr);
+        padding:2rem 50px ;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .box{
+        grid-template-columns: repeat 1fr;
+    }
+}
